@@ -214,9 +214,7 @@ class QuizMain extends Component {
                         <input type="text" className="form-control" />
                       </div>
                       <div className="btn-wrapper text-center">
-                        <button className="btn">
-                          <a>CONTINUE</a>
-                        </button>
+                        <button className="btn">CONTINUE</button>
                       </div>
                     </form>
                   </div>
@@ -232,10 +230,8 @@ class QuizMain extends Component {
 
 export default QuizMain;
 
-{
-  /* <h1>you have completed the quiz</h1>
+/* <h1>you have completed the quiz</h1>
 <p>
   your score is: {score} of {Object.keys(Questions).length}
 </p>
 <p>thank you</p> */
-}
