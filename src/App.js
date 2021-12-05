@@ -5,7 +5,7 @@ import Home from "./Component/Home/Home";
 
 import Header from "./Component/Header";
 import Footer from "./Component/Footer";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Quiz2 from "./Component/Quiz2";
 
