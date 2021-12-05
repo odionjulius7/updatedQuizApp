@@ -2,7 +2,7 @@ import React from "react";
 import "./Answer.scss";
 
 const Answer = (props) => {
-  let { Answer, correctAnswer, clickedAnswer, step, checkAnswer } = props;
+  let { Answer, correctAnswer, clickedAnswer, checkAnswer } = props;
 
   const listAnswer = Object.keys(Answer).map((qAnswer) => {
     return (
