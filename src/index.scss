@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  // @media only screen and (max-width: 50em) {
+  //   font-size: 50%;
+  // }
+  // @media only screen and (max-width: 37.5em) {
+  //   font-size: 37.5%;
+  // }
+}
+
+body {
+  background-image: linear-gradient(to right bottom, #020202bc, #050505b7),
+    url(./img/menuBackgrnd.PNG);
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: blue;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

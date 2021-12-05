@@ -1,0 +1,46 @@
+<>
+<header>hi</header>
+
+        {step === 0 ? (
+          <div onClick={() => this.NextStep(step)}>hi</div>
+        ) : (
+          <div className="content">
+            {step <= Object.keys(Questions).length ? (
+              <>
+                <Question Question={Questions[step]} step={step} />
+                <Answer
+                  Answer={Answers[step]}
+                  step={step}
+                  checkAnswer={this.checkAnswer}
+                  correctAnswer={correctAnswer}
+                  clickedAnswer={clickedAnswer}
+                />
+
+                <button
+                  className="nextStep"
+                  //   we check to see if the length of the question and the
+                  //    clicked answer is greater or equal to step den don't disable the btn
+                  disabled={
+                    clickedAnswer && Object.keys(Questions).length >= step
+                      ? false
+                      : true
+                  }
+                  onClick={() => this.NextStep(step)}
+                >
+                  next
+                </button>
+              </>
+            ) : (
+              <div className="finalPage">
+                <h1>you have completed the quiz</h1>
+                <p>
+                  your score is: {score} of {Object.keys(Questions).length}
+                </p>
+                <p>thank you</p>
+              </div>
+            )}
+          </div>
+        )}
+
+        <footer>hi</footer>
+      </>

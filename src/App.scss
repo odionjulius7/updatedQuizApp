@@ -1,0 +1,49 @@
+.App {
+  max-width: 1140px;
+  min-height: 100vh;
+  margin: 0 auto;
+  // padding: 0 20rem;
+  color: #ffffff;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  overflow: hidden;
+
+  .header {
+    padding: 4rem 0.5rem 2rem 0.5rem;
+
+    .twoSure {
+      height: 8rem;
+
+      @media only screen and (max-width: 37.5em) {
+        height: 6.5rem;
+      }
+    }
+
+    .logo {
+      height: 4rem;
+      @media only screen and (max-width: 37.5em) {
+        height: 3.5rem;
+      }
+    }
+  }
+
+  .main {
+    // na that the direction is column it will grow when the height of the main increases y-axis tho
+    flex: 1;
+  }
+
+  .footer {
+    position: relative;
+    bottom: 0;
+    padding: 2rem 0.5rem 2rem 0.5rem;
+    font-size: 1.2rem;
+
+    /* small screen 600px */
+    @media only screen and (max-width: 37.5em) {
+      padding-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+  }
+}
