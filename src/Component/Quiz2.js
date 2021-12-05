@@ -215,7 +215,7 @@ class Quiz2 extends Component {
                       </div>
                       <div className="btn-wrapper text-center">
                         <button className="btn">
-                          <a>CONTINUE</a>
+                          <a href="#">CONTINUE</a>
                         </button>
                       </div>
                     </form>
