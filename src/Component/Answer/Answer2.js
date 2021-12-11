@@ -17,7 +17,7 @@ const Answer2 = (props) => {
           }
         >
           <span>{qAnswer}.</span>
-          {Answer[qAnswer]}
+          {Answer[qAnswer][0]}
         </label>
       </li>
     );

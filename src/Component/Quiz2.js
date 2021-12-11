@@ -3,6 +3,19 @@ import Answer2 from "./Answer/Answer2";
 import Question2 from "./Question/Question2";
 import "./QuizMain.scss";
 
+import {
+  FaFacebookSquare,
+  FaTwitterSquare,
+  FaWhatsapp,
+  FaInstagram,
+} from "react-icons/fa";
+
+import Specful from "../img/women/badge-specful.png";
+import Specmaking from "../img/women/badge-specmaking.png";
+import Specless from "../img/women/badge-specless.png";
+import SpecTacular from "../img/women/badge-spectacular.png";
+import SpecUpcoming from "../img/women/badge-specupcoming.png";
+
 class Quiz2 extends Component {
   state = {
     Questions: {
@@ -19,74 +32,74 @@ class Quiz2 extends Component {
     },
     Answers: {
       1: {
-        A: "Once a day",
-        B: "Wash and dry",
-        C: "twice a day",
-        D: "Hmmm...on a need to basis",
-        E: "He is into wash and dry",
+        A: ["Once a day", 7],
+        B: ["Wash and dry", 1],
+        C: ["twice a day", 9],
+        D: ["Hmmm...on a need to basis", 5],
+        E: ["He is into wash and dry", 3],
       },
       2: {
-        A: "Why will he wear socks with Native?",
-        B: "Pam slippers for him",
-        C: "Half shoes things",
-        D: "Depend on his mood",
-        E: "Shoe with socks for him",
+        A: ["Why will he wear socks with Native?", 3],
+        B: ["Pam slippers for him", 5],
+        C: ["Half shoes things", 1],
+        D: ["Defend on his mood", 9],
+        E: ["Shoe with socks for him", 7],
       },
       3: {
-        A: "Team legedis",
-        B: "he gat a fleet",
-        C: "All these things don't matter in heaven",
-        D: "Na bicycle him get, him no kill person.",
-        E: "e no come this life to suffer.",
+        A: ["Team legedis", 3],
+        B: ["H gat a fleet", 9],
+        C: ["All these things don't matter in heaven", 7],
+        D: ["Na bicycle him get, him no kill person.", 1],
+        E: ["e no come this life to suffer.", 5],
       },
       4: {
-        A: "What is that?",
-        B: "Who gym help?",
-        C: "Spirit is willing but body is weak",
-        D: "Gym all the way",
-        E: "Eba no gree am go gym",
+        A: ["What is that?", 3],
+        B: ["Who gym help?", 1],
+        C: ["Spirit is willing but body is weak", 9],
+        D: ["Gym all the way", 7],
+        E: ["Eba no gree AM go gym", 5],
       },
       5: {
-        A: "E dey cook him skin?",
-        B: "he takes his time oh ( Boys to men for bathroom )",
-        C: "E depend on if queue dey outside door",
-        D: "Rush in Rush out",
-        E: "It depends on his mood",
+        A: ["he dey cook my skin?", 9],
+        B: ["he take his time oh ( Celine Dion moment )", 1],
+        C: ["E depend on if queue dey outside door", 3],
+        D: ["Rush in Rush out", 5],
+        E: ["It depends on his mood", 7],
       },
       6: {
-        A: "Tattoo yes pls",
-        B: "Earring abeg",
-        C: "The 2 of them",
-        D: "none",
-        E: "He is afraid of the pain",
+        A: ["Tattoo yes pls", 3],
+        B: ["Earring abeg", 5],
+        C: ["The 2 of them", 7],
+        D: ["none", 9],
+        E: ["He is afraid of the pain", 1],
       },
       7: {
-        A: "he Can't be bothered",
-        B: `He is a member of small "bear bear" crew`,
-        C: "Team clean shaven abeg",
-        D: "Anyone goes abeg",
-        E: "Beard gang all the way",
+        A: ["he Can't be bothered", 5],
+        B: [`He is a member of small "bear bear" crew`, 7],
+        C: ["Team clean shaven abeg", 3],
+        D: ["Anyone goes abeg", 1],
+        E: ["Beard gang all the way", 9],
       },
       8: {
-        A: "Well Summarised",
-        B: "Ofcos I represent all tall light and handsome dudes",
-        C: "What about short people? Stop discrimination",
-        D: "He am nobody's ex jor",
-        E: "He is aCharcoal coloured Iroko",
+        A: ["Well Summarised", 3],
+        B: ["Ofcos I represent all tall light and handsome dudes", 1],
+        C: ["What about short people? Stop discrimination", 9],
+        D: ["he is nobody's ex jor", 5],
+        E: ["He is a charcoal coloured Iroko", 7],
       },
       9: {
-        A: "He sniff, e smell, he wash",
-        B: "who boxers help?",
-        C: "Team change daily",
-        D: "Team weekly",
-        E: "Twice per day",
+        A: ["He sniff, e smell, he wash", 5],
+        B: ["who boxers help?", 3],
+        C: ["Team change daily", 1],
+        D: ["Team weekly", 7],
+        E: ["Twice per day", 9],
       },
       10: {
-        A: "You won't see his teeth",
-        B: "You won't hear chomping sound",
-        C: "He chomps away",
-        D: "I don't notice",
-        E: "That's why we don't eat outside",
+        A: ["You won't see his teeth", 9],
+        B: ["You won't hear chomping sound", 5],
+        C: ["He chomps away", 7],
+        D: ["I don't notice", 3],
+        E: ["That's why we don't eat outside", 1],
       },
     },
     correctAnswers: {
@@ -105,32 +118,21 @@ class Quiz2 extends Component {
     clickedAnswer: 0,
     step: 1,
     score: 0,
+    showSpecFul: false,
+    userName: "",
+    number: "",
+    errors: {},
   };
 
   checkAnswer = (answer) => {
-    const { correctAnswers, score, step } = this.state;
-    // we want to check if d clicked answer is the same with the
-    // correctAnswers[step] position
-    // i.e if answer/key/index position 1 is the same as index position
-    // correctAnswer[step] 1
+    const { correctAnswers, score, step, Answers } = this.state;
 
-    // it just mean if answer clicked i key (1)or id (1) and then
-    // correctAnswers[step] e.g step is 1 then set this state
-    // push that correctAnswers that matches to correctAnswer
-    if (answer === correctAnswers[step]) {
-      // if it matches then set score
-      //   set correctAnswer
+    if (answer) {
       this.setState({
-        score: score + 1,
-        correctAnswer: correctAnswers[step],
+        score: score + Answers[step][answer][1],
+        // correctAnswer: correctAnswers[step],
         // now we set that correct Answer to our correctAnswer object
         clickedAnswer: answer, // we still need pass the licked correctAnswer clickedAnswer to it for some conditional rendering
-      });
-    } else {
-      this.setState({
-        correctAnswer: 0,
-        clickedAnswer: answer, // this just incase d clicked answer is not the correct one
-        // we can use it to style the app
       });
     }
   };
@@ -143,16 +145,65 @@ class Quiz2 extends Component {
     });
   };
 
-  totalScore = (propScore) => {
-    const newtotal = Math.floor(
-      (propScore / Object.keys(this.state.Questions).length) * 100
-    );
-    return newtotal;
+  // totalScore = (propScore) => {
+  //   const newtotal = Math.floor(
+  //     (propScore / Object.keys(this.state.Questions).length) * 100
+  //   );
+  //   return newtotal;
+  // };
+
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value,
+    });
+  };
+
+  validateForm = () => {
+    const { userName, number } = this.state;
+    let isValid = true;
+    const errors = {};
+    if (userName.trim().length < 6) {
+      // we use the trim to cut out any white space/ outer space
+      // and at the same time it give the chance to use lenght method
+      errors.userNameLength = "username must be of length 6 or higher";
+      isValid = false;
+    }
+    // if (!userName.includes("$")) {
+    //   // if it does not include $ sign den it is not valid
+    //   errors.userName$ = "username must ' $ ' ";
+    //   isValid = false;
+    // }
+
+    if (number.trim().length < 8) {
+      // we use the trim to cut out any white space/ outer space
+      // and at the same time it give the chance to use lenght method
+      errors.numberLength = "number must be of length 8 or higher";
+      isValid = false;
+    }
+    this.setState({ errors });
+    return isValid; // let return valid state e.i true or false
+  };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const isValid = this.validateForm();
+
+    if (isValid) {
+      this.setState({ showSpecFul: true });
+    }
   };
 
   render() {
-    let { Questions, score, step, Answers, correctAnswer, clickedAnswer } =
-      this.state;
+    let {
+      Questions,
+      score,
+      step,
+      Answers,
+      correctAnswer,
+      clickedAnswer,
+      errors,
+    } = this.state;
     return (
       <div className="content">
         {step <= Object.keys(Questions).length ? (
@@ -184,13 +235,13 @@ class Quiz2 extends Component {
               </button>
             </div>
           </>
-        ) : (
+        ) : this.state.showSpecFul === false ? (
           <div className="finalPage">
             <div className="container">
               <div className="row justify-content-center">
                 <div className="col-md-6 d-flex align-items-center">
                   <div class="finalPage__spec-score">
-                    <span>{this.totalScore(score)}</span>
+                    <span>{score}</span>
                   </div>
                 </div>
 
@@ -200,23 +251,107 @@ class Quiz2 extends Component {
                     <p className="content-subtitle text-center">
                       Fill in your details to know your spec status
                     </p>
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                       <div className="form-group">
                         <label>Instagram/Facebook Profile Link</label>
                         <input
+                          onChange={this.handleChange}
                           type="text"
+                          name="userName"
                           className="form-control"
                           placeholder=""
                         />
                       </div>
                       <div className="form-group">
                         <label>Phone Number</label>
-                        <input type="text" className="form-control" />
+                        <input
+                          onChange={this.handleChange}
+                          type="number"
+                          name="number"
+                          className="form-control"
+                        />
+
+                        {Object.keys(errors).map((key) => {
+                          return (
+                            <div
+                              style={{
+                                color: "orangered",
+                                fontSize: "1.5rem",
+                              }}
+                              key={key}
+                            >
+                              {errors[key]}
+                            </div>
+                          );
+                        })}
                       </div>
                       <div className="btn-wrapper text-center">
                         <button className="btn">CONTINUE</button>
                       </div>
                     </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-md-5 ">
+                <div className="specful">
+                  <h2 className="specful__title text-center pt-50 mb-3">
+                    Share your SPEC Status Badge
+                  </h2>
+                  {score >= 81 ? (
+                    <img
+                      src={SpecTacular}
+                      className="specful__badge mb-2"
+                      alt="spec img"
+                    />
+                  ) : score >= 61 && score <= 80 ? (
+                    <img
+                      src={Specful}
+                      className="specful__badge mb-2"
+                      alt="spec img"
+                    />
+                  ) : score >= 31 && score <= 60 ? (
+                    <img
+                      src={Specmaking}
+                      className="specful__badge mb-2"
+                      alt="spec img"
+                    />
+                  ) : score >= 11 && score <= 30 ? (
+                    <img
+                      src={SpecUpcoming}
+                      className="specful__badge mb-2"
+                      alt="spec img"
+                    />
+                  ) : (
+                    <img
+                      src={Specless}
+                      className="specful__badge mb-2"
+                      alt="spec img"
+                    />
+                  )}
+                  <div className="share-button text-center mt-5">
+                    <button className="share-button__btn px-2">
+                      Download your SPEC badge and share
+                    </button>
+                    <span className="share-text mt-4">Share on:</span>
+                    <div className="d-flex justify-content-center">
+                      <span className="share-button">
+                        <FaFacebookSquare />
+                      </span>
+                      <span className="share-button">
+                        <FaTwitterSquare />
+                      </span>
+                      <span className="share-button">
+                        <FaWhatsapp />
+                      </span>
+                      <span className="share-button">
+                        <FaInstagram />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="591.056" height="553.425" viewBox="0 0 591.056 553.425">
+  <g id="Score_Bubble" data-name="Score Bubble" transform="translate(-1680.944 -253)">
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="234.5" cy="234.5" r="234.5" transform="translate(1741 320)" fill="#fff"/>
+    <text id="Score" transform="translate(1920 428)" fill="#07540c" font-size="55" font-family="Futura-CondensedMedium, Futura" font-weight="500"><tspan x="0" y="0">SCORE</tspan></text>
+    <g id="Ellipse_3" data-name="Ellipse 3" transform="translate(1760 400)" fill="#f3931c" stroke="#707070" stroke-width="1">
+      <circle cx="9" cy="9" r="9" stroke="none"/>
+      <circle cx="9" cy="9" r="8.5" fill="none"/>
+    </g>
+    <g id="Ellipse_7" data-name="Ellipse 7" transform="translate(2192 400)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="9" cy="9" r="9" stroke="none"/>
+      <circle cx="9" cy="9" r="8.5" fill="none"/>
+    </g>
+    <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(1704 596)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="9" cy="9" r="9" stroke="none"/>
+      <circle cx="9" cy="9" r="8.5" fill="none"/>
+    </g>
+    <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(2122 758)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="9" cy="9" r="9" stroke="none"/>
+      <circle cx="9" cy="9" r="8.5" fill="none"/>
+    </g>
+    <circle id="Ellipse_4" data-name="Ellipse 4" cx="16" cy="16" r="16" transform="translate(1975 253)" fill="#d7df23"/>
+    <circle id="Ellipse_10" data-name="Ellipse 10" cx="16" cy="16" r="16" transform="translate(1760 342)" fill="#fff"/>
+    <circle id="Ellipse_6" data-name="Ellipse 6" cx="16" cy="16" r="16" transform="translate(2240 550)" fill="#f3931c"/>
+    <circle id="Ellipse_9" data-name="Ellipse 9" cx="16" cy="16" r="16" transform="translate(1778 735)" fill="#d7df23"/>
+    <g id="Polygon_1" data-name="Polygon 1" transform="matrix(0.891, 0.454, -0.454, 0.891, 2079.204, 269.166)" fill="none">
+      <path d="M24.5,0,49,42H0Z" stroke="none"/>
+      <path d="M 24.5 11.90781021118164 L 10.44622421264648 36 L 38.55377578735352 36 L 24.5 11.90781021118164 M 24.5 0 L 49 42 L 0 42 L 24.5 0 Z" stroke="none" fill="#f3931c"/>
+    </g>
+    <g id="Polygon_2" data-name="Polygon 2" transform="translate(2109.284 361.488) rotate(-25)" fill="none">
+      <path d="M24.5,0,49,42H0Z" stroke="none"/>
+      <path d="M 24.5 11.90781021118164 L 10.44622421264648 36 L 38.55377578735352 36 L 24.5 11.90781021118164 M 24.5 0 L 49 42 L 0 42 L 24.5 0 Z" stroke="none" fill="#f3931c"/>
+    </g>
+    <g id="Polygon_4" data-name="Polygon 4" transform="matrix(0.087, -0.996, 0.996, 0.087, 1680.944, 518.743)" fill="none">
+      <path d="M24.5,0,49,42H0Z" stroke="none"/>
+      <path d="M 24.5 11.90781021118164 L 10.44622421264648 36 L 38.55377578735352 36 L 24.5 11.90781021118164 M 24.5 0 L 49 42 L 0 42 L 24.5 0 Z" stroke="none" fill="#40cd23"/>
+    </g>
+    <g id="Polygon_3" data-name="Polygon 3" transform="matrix(0.342, -0.94, 0.94, 0.342, 2143.967, 735.84)" fill="none">
+      <path d="M24.5,0,49,42H0Z" stroke="none"/>
+      <path d="M 24.5 11.90781021118164 L 10.44622421264648 36 L 38.55377578735352 36 L 24.5 11.90781021118164 M 24.5 0 L 49 42 L 0 42 L 24.5 0 Z" stroke="none" fill="#f3931c"/>
+    </g>
+    <g id="Group_23" data-name="Group 23" transform="matrix(0.819, -0.574, 0.574, 0.819, -159.688, 1359.158)">
+      <line id="Line_3" data-name="Line 3" y2="32.343" transform="translate(2272.172 286.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="6"/>
+      <line id="Line_4" data-name="Line 4" y2="32.343" transform="translate(2288.343 302.672) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="6"/>
+    </g>
+    <g id="Group_26" data-name="Group 26" transform="matrix(0.819, -0.574, 0.574, 0.819, 175.141, 1717.853)">
+      <line id="Line_3-2" data-name="Line 3" y2="32.343" transform="translate(2272.172 286.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="6"/>
+      <line id="Line_4-2" data-name="Line 4" y2="32.343" transform="translate(2288.343 302.672) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="6"/>
+    </g>
+    <g id="Group_27" data-name="Group 27" transform="matrix(0.819, -0.574, 0.574, 0.819, -50.382, 1844.33)">
+      <line id="Line_3-3" data-name="Line 3" y2="32.343" transform="translate(2272.172 286.5)" fill="none" stroke="#40cd23" stroke-linecap="round" stroke-width="6"/>
+      <line id="Line_4-3" data-name="Line 4" y2="32.343" transform="translate(2288.343 302.672) rotate(90)" fill="none" stroke="#40cd23" stroke-linecap="round" stroke-width="6"/>
+    </g>
+    <g id="Group_25" data-name="Group 25" transform="translate(24.734 1193.964) rotate(-30)">
+      <line id="Line_3-4" data-name="Line 3" y2="32.343" transform="translate(2272.172 286.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="6"/>
+      <line id="Line_4-4" data-name="Line 4" y2="32.343" transform="translate(2288.343 302.672) rotate(90)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="6"/>
+    </g>
+    <line id="Line_2" data-name="Line 2" x2="52.098" transform="translate(1949.451 460.803)" fill="none" stroke="#154405" stroke-width="2"/>
+  </g>
+</svg>
